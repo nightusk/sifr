@@ -1,7 +1,7 @@
 ---
 title: "Linuxを始めましょう"
 date: 2021-04-03T01:38:49+09:00
-draft: true
+draft: false
 ---
 
 # インストール
