@@ -1,0 +1,160 @@
+<!doctype html><html lang=ja-jp><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>C言語(再)入門 | sifr</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="インストール C言語のコンパイルに必要なツールをインストールしましょう。
+sudo apt install build-essential 最初の(最小の)Cソース 作業用のディレクトリを作成し、Cソースファイルを作成しましょう。
+mkdir src cd $_ vim tmp.c main(){} それでは早速このCソースファイルをコンパイルしましょう。
+make tmp cc tmp.c -o tmp tmp.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int] 1 | main(){} | ^~~~ 警告は出ていますが、コンパイルは成功したようです。実行してみましょう。
+./tmp 何もしないプログラムなので、特に何も起きません。
+FizzBuzz もう少し意味のあるプログラムを作成しましょう。
+下のプログラムは、3で割り切れる数のときには&#34;fizz&#34;、5で割り切れる数のときには&#34;buzz&#34;、 3でも5でも割り切れるときには&#34;fizzbuzz&#34;と表示し、そうでない数の場合はその数をそのまま表示します(が、そのとおりに動きません)。
+vim fizzbuzz.c #include <stdio.h> int main() { for (int i = 1; i <= 20; ++i) if (i % 3 == 0) puts(&#34;fizz&#34;); else if (i % 5 == 0) puts(&#34;buzz&#34;); else if (i % 3 == 0 && i % 5 == 0) puts(&#34;fizzbuzz&#34;); else printf(&#34;%d\n&#34;, i); } コンパイルして動かしてみましょう。"><meta name=generator content="Hugo 0.82.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/sifr/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css><meta property="og:title" content="C言語(再)入門"><meta property="og:description" content="インストール C言語のコンパイルに必要なツールをインストールしましょう。
+sudo apt install build-essential 最初の(最小の)Cソース 作業用のディレクトリを作成し、Cソースファイルを作成しましょう。
+mkdir src cd $_ vim tmp.c main(){} それでは早速このCソースファイルをコンパイルしましょう。
+make tmp cc tmp.c -o tmp tmp.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int] 1 | main(){} | ^~~~ 警告は出ていますが、コンパイルは成功したようです。実行してみましょう。
+./tmp 何もしないプログラムなので、特に何も起きません。
+FizzBuzz もう少し意味のあるプログラムを作成しましょう。
+下のプログラムは、3で割り切れる数のときには&#34;fizz&#34;、5で割り切れる数のときには&#34;buzz&#34;、 3でも5でも割り切れるときには&#34;fizzbuzz&#34;と表示し、そうでない数の場合はその数をそのまま表示します(が、そのとおりに動きません)。
+vim fizzbuzz.c #include <stdio.h> int main() { for (int i = 1; i <= 20; ++i) if (i % 3 == 0) puts(&#34;fizz&#34;); else if (i % 5 == 0) puts(&#34;buzz&#34;); else if (i % 3 == 0 && i % 5 == 0) puts(&#34;fizzbuzz&#34;); else printf(&#34;%d\n&#34;, i); } コンパイルして動かしてみましょう。"><meta property="og:type" content="article"><meta property="og:url" content="http://nightusk.github.io/sifr/posts/restart-c/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-04-05T22:25:26+09:00"><meta property="article:modified_time" content="2021-04-05T22:25:26+09:00"><meta itemprop=name content="C言語(再)入門"><meta itemprop=description content="インストール C言語のコンパイルに必要なツールをインストールしましょう。
+sudo apt install build-essential 最初の(最小の)Cソース 作業用のディレクトリを作成し、Cソースファイルを作成しましょう。
+mkdir src cd $_ vim tmp.c main(){} それでは早速このCソースファイルをコンパイルしましょう。
+make tmp cc tmp.c -o tmp tmp.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int] 1 | main(){} | ^~~~ 警告は出ていますが、コンパイルは成功したようです。実行してみましょう。
+./tmp 何もしないプログラムなので、特に何も起きません。
+FizzBuzz もう少し意味のあるプログラムを作成しましょう。
+下のプログラムは、3で割り切れる数のときには&#34;fizz&#34;、5で割り切れる数のときには&#34;buzz&#34;、 3でも5でも割り切れるときには&#34;fizzbuzz&#34;と表示し、そうでない数の場合はその数をそのまま表示します(が、そのとおりに動きません)。
+vim fizzbuzz.c #include <stdio.h> int main() { for (int i = 1; i <= 20; ++i) if (i % 3 == 0) puts(&#34;fizz&#34;); else if (i % 5 == 0) puts(&#34;buzz&#34;); else if (i % 3 == 0 && i % 5 == 0) puts(&#34;fizzbuzz&#34;); else printf(&#34;%d\n&#34;, i); } コンパイルして動かしてみましょう。"><meta itemprop=datePublished content="2021-04-05T22:25:26+09:00"><meta itemprop=dateModified content="2021-04-05T22:25:26+09:00"><meta itemprop=wordCount content="597"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="C言語(再)入門"><meta name=twitter:description content="インストール C言語のコンパイルに必要なツールをインストールしましょう。
+sudo apt install build-essential 最初の(最小の)Cソース 作業用のディレクトリを作成し、Cソースファイルを作成しましょう。
+mkdir src cd $_ vim tmp.c main(){} それでは早速このCソースファイルをコンパイルしましょう。
+make tmp cc tmp.c -o tmp tmp.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int] 1 | main(){} | ^~~~ 警告は出ていますが、コンパイルは成功したようです。実行してみましょう。
+./tmp 何もしないプログラムなので、特に何も起きません。
+FizzBuzz もう少し意味のあるプログラムを作成しましょう。
+下のプログラムは、3で割り切れる数のときには&#34;fizz&#34;、5で割り切れる数のときには&#34;buzz&#34;、 3でも5でも割り切れるときには&#34;fizzbuzz&#34;と表示し、そうでない数の場合はその数をそのまま表示します(が、そのとおりに動きません)。
+vim fizzbuzz.c #include <stdio.h> int main() { for (int i = 1; i <= 20; ++i) if (i % 3 == 0) puts(&#34;fizz&#34;); else if (i % 5 == 0) puts(&#34;buzz&#34;); else if (i % 3 == 0 && i % 5 == 0) puts(&#34;fizzbuzz&#34;); else printf(&#34;%d\n&#34;, i); } コンパイルして動かしてみましょう。"></head><body class="ma0 avenir bg-near-white"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/sifr/ class="f3 fw2 hover-white no-underline white-90 dib">sifr</a><div class="flex-l items-center"></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked">POSTS</aside><div id=sharing class=mt3><a href="https://www.facebook.com/sharer.php?u=http://nightusk.github.io/sifr/posts/restart-c/" class="facebook no-underline" aria-label="share on Facebook"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405.0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg></a><a href="https://twitter.com/share?url=http://nightusk.github.io/sifr/posts/restart-c/&text=C%e8%a8%80%e8%aa%9e%28%e5%86%8d%29%e5%85%a5%e9%96%80" class="twitter no-underline" aria-label="share on Twitter"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://nightusk.github.io/sifr/posts/restart-c/&title=C%e8%a8%80%e8%aa%9e%28%e5%86%8d%29%e5%85%a5%e9%96%80" class="linkedin no-underline" aria-label="share on LinkedIn"><svg height="32" style="enable-background:new 0 0 65 65" viewBox="0 0 65 65" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604.0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917.0 20.427.0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458.0 3.44 1.873 3.44 4.618v10.929H50.837zM22.959 24.922c2.367.0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531H22.959zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zM26.354 48.137V27.71h-6.789v20.427h6.789z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a></div><h1 class="f1 athelas mt3 mb1">C言語(再)入門</h1><time class="f6 mv4 dib tracked" datetime=2021-04-05T22:25:26+09:00>April 5, 2021</time></header><div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id=インストール>インストール</h1><p>C言語のコンパイルに必要なツールをインストールしましょう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt install build-essential
+</code></pre></div><h1 id=最初の最小のcソース>最初の(最小の)Cソース</h1><p>作業用のディレクトリを作成し、Cソースファイルを作成しましょう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>mkdir src
+cd $_
+vim tmp.c
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c>main(){}
+</code></pre></div><p>それでは早速このCソースファイルをコンパイルしましょう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>make tmp
+</code></pre></div><pre><code>cc     tmp.c   -o tmp
+tmp.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    1 | main(){}
+      | ^~~~
+</code></pre><p>警告は出ていますが、コンパイルは成功したようです。実行してみましょう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>./tmp
+</code></pre></div><p>何もしないプログラムなので、特に何も起きません。</p><h1 id=fizzbuzz>FizzBuzz</h1><p>もう少し意味のあるプログラムを作成しましょう。<br>下のプログラムは、3で割り切れる数のときには"fizz"、5で割り切れる数のときには"buzz"、
+3でも5でも割り切れるときには"fizzbuzz"と表示し、そうでない数の場合はその数をそのまま表示します(が、そのとおりに動きません)。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>vim fizzbuzz.c
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdio.h&gt;</span><span style=color:#75715e>
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>() {
+  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>; i <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>20</span>; <span style=color:#f92672>++</span>i)
+    <span style=color:#66d9ef>if</span> (i <span style=color:#f92672>%</span> <span style=color:#ae81ff>3</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>) puts(<span style=color:#e6db74>&#34;fizz&#34;</span>);
+    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (i <span style=color:#f92672>%</span> <span style=color:#ae81ff>5</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>) puts(<span style=color:#e6db74>&#34;buzz&#34;</span>);
+    <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (i <span style=color:#f92672>%</span> <span style=color:#ae81ff>3</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>&amp;&amp;</span> i <span style=color:#f92672>%</span> <span style=color:#ae81ff>5</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>) puts(<span style=color:#e6db74>&#34;fizzbuzz&#34;</span>);
+    <span style=color:#66d9ef>else</span> printf(<span style=color:#e6db74>&#34;%d</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, i);
+}
+</code></pre></div><p>コンパイルして動かしてみましょう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>make fizzbuzz
+</code></pre></div><pre><code>cc     fizzbuzz.c   -o fizzbuzz
+</code></pre><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>./fizzbuzz
+</code></pre></div><pre><code>1
+2
+fizz
+4
+buzz
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizz
+16
+17
+fizz
+19
+20
+</code></pre><p>15のときに"fizzbuzz"と表示されてほしいのですが、&ldquo;fizz"と表示されています。<br>プログラムを1行ずつ実行して、何が起きているのか確認しましょう。</p><h1 id=デバッガ入門>デバッガ入門</h1><p>まずはデバッガ(gdb)をインストールしましょう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt install gdb
+</code></pre></div><p>gdbを使ってプログラムを起動してみましょう。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>gdb fizzbuzz
+</code></pre></div><pre><code>GNU gdb (Ubuntu 9.2-0ubuntu1~20.04) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type &quot;show copying&quot; and &quot;show warranty&quot; for details.
+This GDB was configured as &quot;x86_64-linux-gnu&quot;.
+Type &quot;show configuration&quot; for configuration details.
+For bug reporting instructions, please see:
+&lt;http://www.gnu.org/software/gdb/bugs/&gt;.
+Find the GDB manual and other documentation resources online at:
+    &lt;http://www.gnu.org/software/gdb/documentation/&gt;.
+
+For help, type &quot;help&quot;.
+Type &quot;apropos word&quot; to search for commands related to &quot;word&quot;...
+Reading symbols from fizzbuzz...
+(No debugging symbols found in fizzbuzz)
+(gdb) 
+</code></pre><p>デバッグシンボルを含めずにコンパイルしたため<code>(No debugging symbols found in fizzbuzz)</code>と表示されています。
+一度gdbを終了して、デバッグシンボルを含めてコンパイルし直しましょう。</p><pre><code>(gdb) quit
+</code></pre><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>CFLAGS<span style=color:#f92672>=</span>-g make fizzbuzz
+</code></pre></div><pre><code>cc -g    fizzbuzz.c   -o fizzbuzz
+</code></pre><p>もう一度gdbを使ってプログラムを起動してみます。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>gdb fizzbuzz 
+</code></pre></div><pre><code>GNU gdb (Ubuntu 9.2-0ubuntu1~20.04) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type &quot;show copying&quot; and &quot;show warranty&quot; for details.
+This GDB was configured as &quot;x86_64-linux-gnu&quot;.
+Type &quot;show configuration&quot; for configuration details.
+For bug reporting instructions, please see:
+&lt;http://www.gnu.org/software/gdb/bugs/&gt;.
+Find the GDB manual and other documentation resources online at:
+    &lt;http://www.gnu.org/software/gdb/documentation/&gt;.
+
+For help, type &quot;help&quot;.
+Type &quot;apropos word&quot; to search for commands related to &quot;word&quot;...
+Reading symbols from fizzbuzz...
+</code></pre><p>実行してみましょう。</p><pre><code>(gdb) start
+</code></pre><pre><code>Temporary breakpoint 1 at 0x1169: file fizzbuzz.c, line 3.
+Starting program: /home/user/src/fizzbuzz 
+
+Temporary breakpoint 1, main () at fizzbuzz.c:3
+3	int main() {
+</code></pre><p>3行目で中断(break)しています。そのまま1行ずつ実行してみましょう。</p><pre><code>(gdb) next
+</code></pre><pre><code>4	  for (int i = 1; i &lt;= 20; ++i)
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>5	    if (i % 3 == 0) puts(&quot;fizz&quot;);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>6	    else if (i % 5 == 0) puts(&quot;buzz&quot;);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>7	    else if (i % 3 == 0 &amp;&amp; i % 5 == 0) puts(&quot;fizzbuzz&quot;);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>8	    else printf(&quot;%d\n&quot;, i);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>1
+4	  for (int i = 1; i &lt;= 20; ++i)
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>5	    if (i % 3 == 0) puts(&quot;fizz&quot;);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>6	    else if (i % 5 == 0) puts(&quot;buzz&quot;);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>7	    else if (i % 3 == 0 &amp;&amp; i % 5 == 0) puts(&quot;fizzbuzz&quot;);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>8	    else printf(&quot;%d\n&quot;, i);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>2
+4	  for (int i = 1; i &lt;= 20; ++i)
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>5	    if (i % 3 == 0) puts(&quot;fizz&quot;);
+</code></pre><pre><code>(gdb) next
+</code></pre><pre><code>fizz
+4	  for (int i = 1; i &lt;= 20; ++i)
+</code></pre><p>ソースコードを見ながら実行もできます。</p><pre><code>(gdb) layout src
+</code></pre><p>何回かnextしてiが15になるまで進めます。途中でiの値がわからなくなったら</p><pre><code>(gdb) print i
+</code></pre><p>で現在のiの値を確認できます。</p><pre><code>(gdb) next
+4	  for (int i = 1; i &lt;= 20; ++i)
+(gdb) next
+5	    if (i % 3 == 0) puts(&quot;fizz&quot;);
+(gdb) next
+4	  for (int i = 1; i &lt;= 20; ++i)
+
+</code></pre><p>i == 15のとき、7行目の分岐<code>else if (i % 3 == 0 && i % 5 == 0) puts("fizzbuzz");</code>に入ることが期待結果ですが
+5行目の分岐<code>if (i % 3 == 0) puts("fizz");</code>に入り、次のループを実行していることがわかります。</p><ul class=pa0></ul><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l"></aside></article></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=http://nightusk.github.io/sifr/>&copy; sifr 2021</a><div></div></div></footer></body></html>
