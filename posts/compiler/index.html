@@ -69,7 +69,7 @@ cc tmp.c -o tmp -std=c90 -pedantic-error でコンパイルすると下記のよ
 tmp.c:13:3: error: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
    13 |   int i = 10;
       |   ^~~
-</code></pre><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cc tmp.c -o tmp -std<span style=color:#f92672>=</span>c90 -pedantic-error
+</code></pre><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cc tmp.c -o tmp -std<span style=color:#f92672>=</span>c99 -pedantic-error
 </code></pre></div><p>でコンパイルすると、C90のときのエラーは出力されなくなります。</p><h1 id=プリプロセス>プリプロセス</h1><p>プリプロセッサディレクティブ(<code>#</code>)で始まる行を処理しソースコードを生成します。
 またコメントを削除します。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cc tmp.c -E
 </code></pre></div><p>でプリプロセス結果を表示することができ、上のソースコードのプリプロセス結果は下記のようになります。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#75715e># 1 &#34;tmp.c&#34;
