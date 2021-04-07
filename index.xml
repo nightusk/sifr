@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sifr</title><link>http://nightusk.github.io/sifr/</link><description>Recent content on sifr</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 05 Apr 2021 22:25:26 +0900</lastBuildDate><atom:link href="http://nightusk.github.io/sifr/index.xml" rel="self" type="application/rss+xml"/><item><title>C言語(再)入門</title><link>http://nightusk.github.io/sifr/posts/restart-c/</link><pubDate>Mon, 05 Apr 2021 22:25:26 +0900</pubDate><guid>http://nightusk.github.io/sifr/posts/restart-c/</guid><description>インストール C言語のコンパイルに必要なツールをインストールしましょう。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sifr</title><link>http://nightusk.github.io/sifr/</link><description>Recent content on sifr</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 07 Apr 2021 21:39:23 +0900</lastBuildDate><atom:link href="http://nightusk.github.io/sifr/index.xml" rel="self" type="application/rss+xml"/><item><title>コンパイラ</title><link>http://nightusk.github.io/sifr/posts/compiler/</link><pubDate>Wed, 07 Apr 2021 21:39:23 +0900</pubDate><guid>http://nightusk.github.io/sifr/posts/compiler/</guid><description>前の記事では、
+make tmp と実行し、
+cc tmp.c -o tmp と表示されて実行プログラムが作成されました。
+ここで、makeはビルド自動化ツールで、ccがコンパイラです。
+ここではコンパイラが何をしているのか、何ができるのかを見ていきましょう。
+#define CONSTANT 10 #define EN 0 #define JA 1 // main関数 int main() { #if LANGUAGE == EN printf(&amp;#34;hello, %d\n&amp;#34;, CONSTANT); #elif LANGUAGE == JA printf(&amp;#34;こんにちは, %d\n&amp;#34;, CONSTANT); #endif int i = 10; } C言語のバージョン C90: 1990年に策定されたC言語の仕様
+C99: 1999年に策定されたC言語の仕様
+C11: 2011年に策定されたC言語の仕様
+組み込み開発では未だにC90がよく使われます。 少しずつ文法に変更が加えられていますが、C99での変更を知っておくとよいでしょう。 代表的なものには
+行コメント構文(//)の追加 ブロック先頭以外でのローカル変数の宣言が可能となった などがあります。
+コンパイル時に-std=c90のように指定することでバージョンを切り替えることができます。 例えば上のソースコードでは
+cc tmp.c -o tmp -std=c90 -pedantic-error でコンパイルすると下記のようにエラーになりますが、</description></item><item><title>C言語(再)入門</title><link>http://nightusk.github.io/sifr/posts/restart-c/</link><pubDate>Mon, 05 Apr 2021 22:25:26 +0900</pubDate><guid>http://nightusk.github.io/sifr/posts/restart-c/</guid><description>インストール C言語のコンパイルに必要なツールをインストールしましょう。
 sudo apt install build-essential 最初の(最小の)Cソース 作業用のディレクトリを作成し、Cソースファイルを作成しましょう。
 mkdir src cd $_ vim tmp.c main(){} それでは早速このCソースファイルをコンパイルしましょう。
 make tmp cc tmp.c -o tmp tmp.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int] 1 | main(){} | ^~~~ 警告は出ていますが、コンパイルは成功したようです。実行してみましょう。
