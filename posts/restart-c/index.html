@@ -5,7 +5,7 @@ make tmp cc tmp.c -o tmp tmp.c:1:1: warning: return type defaults to ‘int’ [
 ./tmp 何もしないプログラムなので、特に何も起きません。
 FizzBuzz もう少し意味のあるプログラムを作成しましょう。
 下のプログラムは、3で割り切れる数のときには&#34;fizz&#34;、5で割り切れる数のときには&#34;buzz&#34;、 3でも5でも割り切れるときには&#34;fizzbuzz&#34;と表示し、そうでない数の場合はその数をそのまま表示します(が、そのとおりに動きません)。
-vim fizzbuzz.c #include <stdio.h> int main() { for (int i = 1; i <= 20; ++i) if (i % 3 == 0) puts(&#34;fizz&#34;); else if (i % 5 == 0) puts(&#34;buzz&#34;); else if (i % 3 == 0 && i % 5 == 0) puts(&#34;fizzbuzz&#34;); else printf(&#34;%d\n&#34;, i); } コンパイルして動かしてみましょう。"><meta name=generator content="Hugo 0.82.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/sifr/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css><meta property="og:title" content="C言語(再)入門"><meta property="og:description" content="インストール C言語のコンパイルに必要なツールをインストールしましょう。
+vim fizzbuzz.c #include <stdio.h> int main() { for (int i = 1; i <= 20; ++i) if (i % 3 == 0) puts(&#34;fizz&#34;); else if (i % 5 == 0) puts(&#34;buzz&#34;); else if (i % 3 == 0 && i % 5 == 0) puts(&#34;fizzbuzz&#34;); else printf(&#34;%d\n&#34;, i); } コンパイルして動かしてみましょう。"><meta name=generator content="Hugo 0.83.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/sifr/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css><meta property="og:title" content="C言語(再)入門"><meta property="og:description" content="インストール C言語のコンパイルに必要なツールをインストールしましょう。
 sudo apt install build-essential 最初の(最小の)Cソース 作業用のディレクトリを作成し、Cソースファイルを作成しましょう。
 mkdir src cd $_ vim tmp.c main(){} それでは早速このCソースファイルをコンパイルしましょう。
 make tmp cc tmp.c -o tmp tmp.c:1:1: warning: return type defaults to ‘int’ [-Wimplicit-int] 1 | main(){} | ^~~~ 警告は出ていますが、コンパイルは成功したようです。実行してみましょう。

@@ -9,7 +9,7 @@ C11: 2011年に策定されたC言語の仕様
 組み込み開発では未だにC90がよく使われます。 少しずつ文法に変更が加えられていますが、C99での変更を知っておくとよいでしょう。 代表的なものには
  行コメント構文(//)の追加 ブロック先頭以外でのローカル変数の宣言が可能となった  などがあります。
 コンパイル時に-std=c90のように指定することでバージョンを切り替えることができます。 例えば上のソースコードでは
-cc tmp.c -o tmp -std=c90 -pedantic-error でコンパイルすると下記のようにエラーになりますが、"><meta name=generator content="Hugo 0.82.0"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/sifr/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css><meta property="og:title" content="コンパイラ"><meta property="og:description" content="前の記事では、
+cc tmp.c -o tmp -std=c90 -pedantic-error でコンパイルすると下記のようにエラーになりますが、"><meta name=generator content="Hugo 0.83.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/sifr/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css><meta property="og:title" content="コンパイラ"><meta property="og:description" content="前の記事では、
 make tmp と実行し、
 cc tmp.c -o tmp と表示されて実行プログラムが作成されました。
 ここで、makeはビルド自動化ツールで、ccがコンパイラです。
