@@ -88,7 +88,7 @@ Shift  z x c v B N m , . /
 Vimと異なり、使用するキーは離れているが、
 ```
 Ctrl-F(→:Forward(先へ))
-Ctrl-B(←:Backword(後へ))
+Ctrl-B(←:Backward(後へ))
 Ctrl-N(↓:Next(次へ))
 Ctrl-P(↑:Previous(前へ))
 ```
