@@ -27,7 +27,7 @@ cent(er|re) とすればどちらも要素となり検索できます。
 ()[]{}| さえわかれば、正規表現を理解した、と言っても過言ではない。 (少し足りないところはあるが)
 このほかにもいろいろな記法はあるが、それらは上で説明したことを、もっと楽に表すための手段でしかないし、覚えられなかったとしても上の基本的なやり方で代用できる。
 よく使うものだけ例で挙げておこう
-   記法 別の記法 意味     \d [0-9] 数字   \w [a-zA-Z_0-9] アルファベットか数字かアンダーバー(C言語の変数名や関数名に使用できる文字)   \s [ \t\r\n] スペース・タブ・改行などの空白文字   ."><meta name=generator content="Hugo 0.83.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/sifr/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css><meta property="og:title" content="正規表現(Regular Expression)"><meta property="og:description" content="正規表現とは？ 文字列の集合(set)を表す。
+   記法 別の記法 意味     \d [0-9] 数字   \w [a-zA-Z_0-9] アルファベットか数字かアンダーバー(C言語の変数名や関数名に使用できる文字)   \s [ \t\r\n] スペース・タブ・改行などの空白文字   ."><meta name=generator content="Hugo 0.84.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/sifr/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css><meta property="og:title" content="正規表現(Regular Expression)"><meta property="og:description" content="正規表現とは？ 文字列の集合(set)を表す。
 ん？意味が分からない。検索で使っているのをよく見かけるんだけど？
 そう。検索で使うときには、条件に指定した文字列の集合に含まれる文字列を返している。 この他に正規表現が使われるシーンとしては、入力チェックがある。入力された文字列がチェック用の文字列集合に含まれていなければエラーとする、というものだ。 多分何のことを言っているのかわからないと思うが、今はそれでいい。下の節で詳しく見ていこう。
 最小の正規表現 最小の集合といえば何だろう？そう空集合(empty set:Φ)だ。では、正規表現における空集合は何だろう？何もない文字列、つまり文字数0の
